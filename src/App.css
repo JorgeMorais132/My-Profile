@@ -1,19 +1,23 @@
+
+:root{
+  --dark-blue-top-bar: #181D31;
+  --light-text-color:#F1F1F1;
+  --dark-background-color:#100F0F;
+  --dark-green-select-top-bar:#0F3D3E;
+  --beige-hover-top-bar:#E2DCC8;
+}
+
+
+
+
 .App {
   text-align: center;
+  background-color: var(--dark-background-color);
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+/*.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,17 +26,46 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}*/
+
+/*------------------------------------------Top Bar---------------------------------*/
+.topnav {
+  background-color: var( --dark-blue-top-bar);
+  overflow: hidden;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.topnav a {
+  float: right;
+  color: var(--light-text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 550;
+  border-radius: 5px;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.topnav a:hover {
+  background-color: var(--beige-hover-top-bar);
+  color: var(--dark-blue-top-bar);
+}
+
+
+.topnav a.active {
+  background-color: var(--dark-green-select-top-bar);
+  color: var(--light-text-color);
+}
+
+
+
+/*-------------------------------------------Contacts------------------------------------*/
+
+.ContactsContainer{
+  display: flex;
+  border: 1px solid red;
+  justify-content: center;
+  align-items: center;
 }
