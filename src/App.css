@@ -13,7 +13,7 @@
 .App {
   text-align: center;
   background-color: var(--dark-background-color);
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -64,8 +64,61 @@
 /*-------------------------------------------Contacts------------------------------------*/
 
 .ContactsContainer{
-  display: flex;
+  /*display: flex;
   border: 1px solid red;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
+*/
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(200px,2fr));
+align-items: center;
+justify-items: center;
+grid-gap: 2rem 3rem;
+overflow: hidden;
+padding: 25px;
+}
+
+
+.card{
+  color: var(--light-text-color);
+  width: 100%;
+  background-color: var(--dark-blue-top-bar);
+  min-width: 100px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 10px 3px var(--dark-green-select-top-bar);
+}
+
+.cardTitle{
+  font-size: 18px;
+  margin: 0;
+}
+
+.buttonToLink{
+  background-color: var(--dark-green-select-top-bar);
+  position: relative;
+  width: 90%;
+  padding: 3px;
+  border-radius: 5px;
+  border:1px solid var(--dark-background-color);  
+}
+
+.buttonToLink p{
+  font-size: 13px;
+  margin: 0;
+  color: var(--light-text-color);
+}
+
+.cardBody{
+  color: var(--light-text-color);
+  font-size: 13px;
+  margin: 0;
+  margin-top: 100%;
+  margin-bottom: 5px;
+}
+
+.cardBody p{
+  margin: 0px;
 }
