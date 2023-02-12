@@ -6,6 +6,7 @@
   --dark-green-select-top-bar:#0F3D3E;
   --beige-hover-top-bar:#E2DCC8;
   --blue--background:#6096B4;
+  --font:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 *{
@@ -21,6 +22,7 @@ body{
 .App {
   text-align: center;
   height: 100%;
+  width: 100%;
 }
 
 
@@ -44,8 +46,9 @@ body{
   padding-left: 5px;
   padding-top: 5px;
   text-decoration: none;
-  font-size: 20px;
+  font-size:clamp(13px, 2vw, 19px);
   font-weight: 550; 
+  width: 100%;
 }
 .topnav ul{
   float: right;
@@ -57,11 +60,12 @@ border: none;
 
 .topnav a{
   color: var(--light-text-color);
+  border: none !important;
 
 }
 
 .topnav a:hover {
-  background-color: var(--beige-hover-top-bar);
+  background-color: var(--light-text-color);
   color: var(--dark-blue-top-bar);
   border: none;
 }
@@ -72,6 +76,74 @@ border: none;
   color: var(--light-text-color);
   border: none;
 }
+
+/*-------------------------------------------Home----------------------------------------*/
+
+.Home{
+display: flex;
+flex-wrap: wrap;
+overflow: hidden;
+
+}
+.IntroHome{
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  padding-left: 20%;
+  padding-top: 80px; 
+  text-align: left;
+  font-family:var(--font);
+  color: var(--dark-almost-black-color);
+ 
+  width: fit-content;
+ 
+}
+.myNameIs{
+ margin-bottom: 0;
+ color: var(--dark-green-select-top-bar);
+ font-weight: 700;
+ font-size: clamp(10px, 10vw, 15px);
+}
+
+
+.BigTextName{
+  font-size:clamp(40px, 10vw, 60px);
+  margin-bottom: 0;
+}
+
+
+.BigTextBuild{
+  font-size:clamp(50px, 10vw, 90px);
+  text-align: left;  
+}
+
+.descriptionHome{
+  margin-bottom: 0;
+  color: var(--dark-green-select-top-bar);
+  font-weight: 500;
+  opacity: .85;
+  font-size: 14px;
+  
+}
+
+.SocialLinks{
+
+  display: flex;
+}
+
+.SocialLinks ul{
+  list-style-type: none;
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
 
 
 
