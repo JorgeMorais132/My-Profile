@@ -1,12 +1,21 @@
 import React from 'react'
+import {NavLink, Link} from 'react-router-dom'
 
 export default function TopBar() {
   return (
-    <div class="topnav"> 
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#news">News</a>
-  <a class="active" href="#home">Home</a>
+    <div className="topnav"> 
+  <ul className="nav nav-tabs">
+  <li className="nav-item">
+    <NavLink className="nav-link" to="/">Home</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="projects">Projects</NavLink>
+  </li>
+  <li className="nav-item">
+    <NavLink className="nav-link" to="contacts">Contact Me</NavLink>
+  </li>
+
+</ul>
     </div>
   )
 }

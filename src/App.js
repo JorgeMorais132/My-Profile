@@ -1,16 +1,25 @@
 import './App.css';
-import Contacts from './Components/Contacts/Contacts';
+import Home from './Components/Home/Home';
+import Projects from './Components/Projects/Projects';
 import TopBar from './Components/TopBar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Contacts from './Components/Contacts/Contacts';
 
 
-/// colors: #100F0F #0F3D3E #E2DCC8 #F1F1F1 #181D31
 
 function App() {
   return (
-    <div className="App">
-      <TopBar></TopBar>
-      <Contacts></Contacts>
-    </div>
+    <BrowserRouter>
+        <div className="App">
+          <TopBar></TopBar>
+          <Routes>
+            <Route exact path='/' element={<Home/>}></Route>
+            <Route exact path='/projects' element={<Projects/>}></Route>
+            <Route exact path='/contact' element={<Contacts/>}></Route>
+          </Routes>
+         
+        </div>
+    </BrowserRouter>
   );
 }
 

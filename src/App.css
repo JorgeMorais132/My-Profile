@@ -2,17 +2,24 @@
 :root{
   --dark-blue-top-bar: #181D31;
   --light-text-color:#F1F1F1;
-  --dark-background-color:#100F0F;
+  --dark-almost-black-color:#100F0F;
   --dark-green-select-top-bar:#0F3D3E;
   --beige-hover-top-bar:#E2DCC8;
+  --blue--background:#6096B4;
+
+}
+*{
+  padding: 0;
+  margin: 0;
 }
 
-
-
+body{
+  background-color: var(--blue--background);
+  margin: 0;
+}
 
 .App {
   text-align: center;
-  background-color: var(--dark-background-color);
   height: 100%;
 }
 
@@ -32,52 +39,50 @@
 .topnav {
   background-color: var( --dark-blue-top-bar);
   overflow: hidden;
-
-}
-
-
-.topnav a {
-  float: right;
-  color: var(--light-text-color);
   text-align: center;
-  padding: 14px 16px;
+  padding-right: 15px;
+  padding-left: 5px;
+  padding-top: 5px;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 550;
-  border-radius: 5px;  
+  font-size: 20px;
+  font-weight: 550; 
+}
+.topnav ul{
+  float: right;
+  border: none;
+}
+.topnav li{
+border: none;
 }
 
+.topnav a{
+  color: var(--light-text-color);
+
+}
 
 .topnav a:hover {
   background-color: var(--beige-hover-top-bar);
   color: var(--dark-blue-top-bar);
+  border: none;
 }
 
 
-.topnav a.active {
-  background-color: var(--dark-green-select-top-bar);
+.topnav .nav-link.active {
+  background-color: var(--blue--background);
   color: var(--light-text-color);
+  border: none;
 }
 
 
 
-/*-------------------------------------------Contacts------------------------------------*/
+/*-------------------------------------------Projects------------------------------------*/
 
-.ContactsContainer{
-  /*display: flex;
-  border: 1px solid red;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  overflow: hidden;
-*/
-display: grid;
-grid-template-columns: repeat(auto-fill,minmax(200px,2fr));
-align-items: center;
-justify-items: center;
-grid-gap: 2rem 3rem;
-overflow: hidden;
-padding: 25px;
+.ProjectsContainer{
+  display: grid;
+  place-items: center center;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  padding: 20px;
+  grid-gap: 40px;
 }
 
 
@@ -87,38 +92,52 @@ padding: 25px;
   background-color: var(--dark-blue-top-bar);
   min-width: 100px;
   border-radius: 10px;
-  padding-bottom: 5px;
-  box-shadow: 0px 0px 10px 3px var(--dark-green-select-top-bar);
+  padding-bottom: 0px;
+  background-image: url('/public/images/Sevilha.jpeg');
+  background-size:     cover;                      
+  background-repeat:   no-repeat;
+  background-position: center center;   
+  border: 1px solid red;
 }
 
 .cardTitle{
   font-size: 18px;
-  margin: 0;
 }
 
 .buttonToLink{
-  background-color: var(--dark-green-select-top-bar);
+  background-color: transparent;
   position: relative;
   width: 90%;
   padding: 3px;
   border-radius: 5px;
-  border:1px solid var(--dark-background-color);  
+  border:1px solid red;  
 }
 
 .buttonToLink p{
   font-size: 13px;
-  margin: 0;
   color: var(--light-text-color);
 }
 
 .cardBody{
   color: var(--light-text-color);
   font-size: 13px;
-  margin: 0;
   margin-top: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
+  background-color: rgba(0, 0, 0, .5);
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  
 }
 
-.cardBody p{
+.cardBody .descriptionCard{
   margin: 0px;
+}
+
+
+.CardArrowUp{
+  content: url('../public/images/CardArrowUp.png');
+  filter: brightness(0) invert(1);
+  
 }
