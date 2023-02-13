@@ -83,8 +83,10 @@ border: none;
 display: flex;
 flex-wrap: wrap;
 overflow: hidden;
+justify-content: space-between;
 
 }
+/*-----------------------------------------IntroText--------------------------------------*/
 .IntroHome{
   width: 100%;
   align-items: center;
@@ -94,9 +96,6 @@ overflow: hidden;
   text-align: left;
   font-family:var(--font);
   color: var(--dark-almost-black-color);
- 
-  width: fit-content;
- 
 }
 .myNameIs{
  margin-bottom: 0;
@@ -125,15 +124,22 @@ overflow: hidden;
   font-size: 14px;
   
 }
+/*---------------------------Social Links------------------------------*/
 
 .SocialLinks{
-
-  display: flex;
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
 }
 
 .SocialLinks ul{
   list-style-type: none;
-  display: flex;
+}
+.SocialLinks li{
+  margin-bottom: 30px;
+}
+.SocialLinks li i{
+  color: var(--dark-almost-black-color);
 }
 
 
