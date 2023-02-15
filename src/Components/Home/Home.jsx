@@ -7,15 +7,7 @@ export default function Home() {
     <div className='Home'>
         <SocialIcons></SocialIcons>
         <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
-        <IntroText></IntroText>
+   
         
        
        
